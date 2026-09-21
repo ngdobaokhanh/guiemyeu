@@ -1,0 +1,1 @@
+const EasterEggs={init(){if(!SETTINGS.easterEggsEnabled)return;let n=0,t;document.addEventListener('click',e=>{if(e.target.closest('.opening h1')){n++;clearTimeout(t);t=setTimeout(()=>n=0,1300);if(n===5){n=0;alert('P.S. Anh yêu em nhiều hơn những gì website này có thể nói.')}}})}};

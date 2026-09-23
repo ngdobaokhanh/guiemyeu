@@ -1,0 +1,70 @@
+/* Final image sizing overrides: keep the complete photo visible */
+.memory-image {
+  width: min(100%, 420px) !important;
+  height: min(52svh, 500px) !important;
+  aspect-ratio: auto !important;
+  padding: 6px !important;
+  background: linear-gradient(145deg, rgba(242,211,140,.72), rgba(130,91,33,.28) 45%, rgba(242,211,140,.58)) !important;
+}
+
+.memory-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #0b0a08 !important;
+  transform: none !important;
+}
+
+.memory-image:hover img,
+.memory-image:focus-within img,
+.active .memory-image img {
+  transform: none !important;
+}
+
+.gallery img {
+  flex: 0 0 min(22vw, 210px) !important;
+  width: min(22vw, 210px) !important;
+  height: 150px !important;
+  padding: 4px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #0b0a08 !important;
+}
+
+@media (max-width: 720px) {
+  .memory-layout {
+    gap: 1rem !important;
+  }
+
+  .memory-image {
+    width: min(86vw, 340px) !important;
+    height: min(34svh, 300px) !important;
+    min-height: 210px !important;
+    padding: 4px !important;
+  }
+
+  .memory-image::before,
+  .memory-image::after {
+    inset: 4px !important;
+  }
+
+  .gallery img {
+    flex-basis: 68vw !important;
+    width: 68vw !important;
+    height: 125px !important;
+    padding: 3px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .memory-image {
+    width: min(84vw, 320px) !important;
+    height: 250px !important;
+    min-height: 0 !important;
+  }
+
+  .gallery img {
+    height: 112px !important;
+  }
+}

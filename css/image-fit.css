@@ -1,4 +1,5 @@
 /* Final image sizing overrides: keep the complete photo visible */
+
 .memory-image {
   width: min(100%, 420px) !important;
   height: min(52svh, 500px) !important;
@@ -22,14 +23,54 @@
   transform: none !important;
 }
 
+/* Gallery fixes */
+.gallery {
+  display: flex !important;
+  gap: 1rem !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-snap-type: x mandatory !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  padding: 0.5rem 0 !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(201,164,94,.4) transparent !important;
+  min-height: 200px !important;
+}
+
+.gallery::-webkit-scrollbar {
+  height: 4px !important;
+}
+
+.gallery::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background: rgba(201,164,94,.4) !important;
+  border-radius: 2px !important;
+}
+
 .gallery img {
-  flex: 0 0 min(22vw, 210px) !important;
-  width: min(22vw, 210px) !important;
-  height: 150px !important;
-  padding: 4px !important;
+  flex: 0 0 200px !important;
+  width: 200px !important;
+  height: 170px !important;
+  min-width: 200px !important;
   object-fit: contain !important;
   object-position: center !important;
   background: #0b0a08 !important;
+  border: 1px solid rgba(234,199,122,.5) !important;
+  padding: 0 !important;
+  scroll-snap-align: center !important;
+  filter: saturate(.74) contrast(1.03);
+  transition: transform .4s ease, filter .4s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover,
+.gallery img:focus {
+  transform: scale(1.05);
+  filter: saturate(.95) contrast(1.08);
 }
 
 @media (max-width: 720px) {
@@ -49,11 +90,16 @@
     inset: 4px !important;
   }
 
+  .gallery {
+    margin-top: 1.5rem !important;
+    min-height: 160px !important;
+  }
+
   .gallery img {
-    flex-basis: 68vw !important;
-    width: 68vw !important;
-    height: 125px !important;
-    padding: 3px !important;
+    flex: 0 0 160px !important;
+    width: 160px !important;
+    height: 140px !important;
+    min-width: 160px !important;
   }
 }
 
@@ -64,7 +110,15 @@
     min-height: 0 !important;
   }
 
+  .gallery {
+    margin-top: 1.2rem !important;
+    min-height: 140px !important;
+  }
+
   .gallery img {
-    height: 112px !important;
+    flex: 0 0 140px !important;
+    width: 140px !important;
+    height: 120px !important;
+    min-width: 140px !important;
   }
 }

@@ -12,21 +12,21 @@
   width: min(100%, 420px) !important;
   height: min(52svh, 500px) !important;
   aspect-ratio: auto !important;
-  padding: 6px !important;
+  padding: 8px !important;
   margin-bottom: 2rem !important;
   background: linear-gradient(145deg, rgba(242,211,140,.72), rgba(130,91,33,.28) 45%, rgba(242,211,140,.58)) !important;
-  border: 1px solid rgba(236, 200, 118, 0.7) !important;
+  border: 2px solid rgba(236, 200, 118, 0.8) !important;
   border-radius: 18px !important;
   box-shadow: 0 12px 28px rgba(18, 11, 6, 0.45), inset 0 0 0 1px rgba(255, 244, 210, 0.35) !important;
   position: relative !important;
-  overflow: hidden !important;
+  overflow: visible !important;
   transform: rotate(-0.3deg) !important;
 }
 
 .memory-image::before {
   content: "" !important;
   position: absolute !important;
-  inset: 8px !important;
+  inset: 10px !important;
   border: 1px solid rgba(255, 245, 210, 0.42) !important;
   border-radius: 12px !important;
   pointer-events: none !important;
@@ -46,13 +46,14 @@
   height: 100% !important;
   object-fit: contain !important;
   object-position: center !important;
-  background: #0b0a08 !important;
+  background: linear-gradient(135deg, #f5e0a7 0%, #faf4d8 50%, #e8d899 100%) !important;
   transform: none !important;
-  border-radius: 12px !important;
+  border-radius: 10px !important;
   display: block !important;
   opacity: 1 !important;
   animation: memoryFadeIn 1.2s cubic-bezier(.18,.9,.2,1) forwards !important;
   filter: saturate(0.9) contrast(1.04) sepia(0.08) !important;
+  padding: 0 !important;
 }
 
 .memory-image img:not([src]),
@@ -142,7 +143,7 @@
   min-width: 200px !important;
   object-fit: contain !important;
   object-position: center !important;
-  background: #0b0a08 !important;
+  background: linear-gradient(135deg, #f5e0a7 0%, #faf4d8 50%, #e8d899 100%) !important;
   border: 1px solid rgba(234,199,122,.5) !important;
   border-radius: 14px !important;
   padding: 0 !important;
@@ -182,12 +183,12 @@
     width: min(86vw, 340px) !important;
     height: min(34svh, 300px) !important;
     min-height: 210px !important;
-    padding: 4px !important;
+    padding: 6px !important;
     margin-bottom: 1.5rem !important;
   }
 
   .memory-image::before {
-    inset: 4px !important;
+    inset: 6px !important;
   }
 
   .memory-copy {

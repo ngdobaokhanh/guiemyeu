@@ -50,9 +50,14 @@
   transform: none !important;
   border-radius: 12px !important;
   display: block !important;
-  opacity: 0 !important;
+  opacity: 1 !important;
   animation: memoryFadeIn 1.2s cubic-bezier(.18,.9,.2,1) forwards !important;
   filter: saturate(0.9) contrast(1.04) sepia(0.08) !important;
+}
+
+.memory-image img:not([src]),
+.memory-image img[src=""] {
+  opacity: 0 !important;
 }
 
 .memory-image:hover img,
@@ -91,7 +96,7 @@
 
 @keyframes memoryFadeIn {
   from {
-    opacity: 0;
+    opacity: 0.3;
     transform: translateY(18px) scale(0.985);
     filter: saturate(0.8) blur(1.2px) sepia(0.1);
   }
